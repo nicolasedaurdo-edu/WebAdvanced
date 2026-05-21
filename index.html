@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="nl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>F1 Explorer</title>
+    <link rel="stylesheet" href="/src/css/style.css" />
+  </head>
+  <body>
+
+    <header>
+      <h1>🏎️ F1 Explorer</h1>
+      <button id="thema-btn">🌙 Donker thema</button>
+    </header>
+
+    <main>
+      <!-- Seizoensselectie -->
+      <section id="filters">
+        <select id="seizoen-select"></select>
+        <input type="text" id="zoek-input" placeholder="Zoek coureur of team..." />
+        <select id="sorteer-select">
+          <option value="naam">Sorteren op naam</option>
+          <option value="nationaliteit">Sorteren op nationaliteit</option>
+        </select>
+      </section>
+
+      <!-- Lijst van coureurs -->
+      <section id="coureurs-lijst"></section>
+
+      <!-- Favorieten -->
+      <section id="favorieten">
+        <h2>❤️ Favorieten</h2>
+        <div id="favorieten-lijst"></div>
+      </section>
+    </main>
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
