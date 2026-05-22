@@ -1,4 +1,4 @@
-import { getCoureurs, getSeizoenен } from "./api.js";
+import { getCoureurs, getSeizoenen } from "./api.js";
 import { renderCoureurs, renderFavorieten } from "./render.js";
 import { saveThema, getThema, saveSeizoen, getSeizoen } from "./storage.js";
 
@@ -10,7 +10,7 @@ const sorteerSelect = document.querySelector("#sorteer-select");
 const themaBtn = document.querySelector("#thema-btn");
 
 const vulSeizoenSelect = () => {
-  const seizoenen = getSeizoenен();
+  const seizoenen = getSeizoenen();
   seizoenen.forEach((jaar) => {
     const optie = document.createElement("option");
     optie.value = jaar;
