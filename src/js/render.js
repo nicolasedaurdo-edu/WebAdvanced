@@ -12,7 +12,7 @@ export const renderCoureurs = (coureurs) => {
 
   coureurs.forEach((coureur) => {
     const favorieten = getFavorieten();
-    const isFavoriet = favorieten.some((f) => f.driverId === coureur.driverId);
+    const isFavoriet = favorieten.some((f) => f.driverId === coureur.driverId); // (Hulp van AI)
 
     const kaart = document.createElement("div");
     kaart.classList.add("kaart");
@@ -22,7 +22,7 @@ export const renderCoureurs = (coureurs) => {
       <p>🎂 ${coureur.dateOfBirth}</p>
       <p>🔢 Nummer: ${coureur.permanentNumber ?? "?"}</p>
       <p>🏎️ Code: ${coureur.code ?? "?"}</p>
-     <button class="fav-btn ${isFavoriet ? "actief" : ""}" data-id="${coureur.driverId}">
+      <button class="fav-btn ${isFavoriet ? "actief" : ""}" data-id="${coureur.driverId}">
         ${isFavoriet ? "❤️ Verwijderen" : "🤍 Favoriet"}
       </button>
       <button class="info-btn" data-id="${coureur.driverId}">ℹ️ Meer info</button>
@@ -37,7 +37,8 @@ export const renderCoureurs = (coureurs) => {
       renderCoureurs(coureurs);
       renderFavorieten();
     });
-      kaart.querySelector(".info-btn").addEventListener("click", () => {
+
+    kaart.querySelector(".info-btn").addEventListener("click", () => {
       const seizoen = document.querySelector("#seizoen-select").value;
       toonModal(coureur, seizoen);
     });
@@ -81,11 +82,11 @@ export const toonModal = async (coureur, seizoen) => {
   modal.classList.remove("verborgen");
 
   try {
-    const foto = await getWikiFoto(coureur.url);
-    const races = await getCoureurResultaten(seizoen, coureur.driverId);
+    const foto = await getWikiFoto(coureur.url); // (Hulp van AI)
+    const races = await getCoureurResultaten(seizoen, coureur.driverId); // (Hulp van AI)
 
     let racesHtml = races
-      .map((race) => {
+      .map((race) => {                              // (Hulp van AI)
         const resultaat = race.Results[0];
         return `
           <tr>
