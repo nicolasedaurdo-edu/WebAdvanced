@@ -60,6 +60,18 @@ const wisselThema = () => {
   themaBtn.textContent = nieuwThema === "donker" ? "☀️ Licht thema" : "🌙 Donker thema";
   saveThema(nieuwThema);
 };
+const modal = document.querySelector("#modal");
+const modalSluit = document.querySelector("#modal-sluit");
+
+modalSluit.addEventListener("click", () => {
+  modal.classList.add("verborgen");
+});
+
+modal.addEventListener("click", (e) => {
+  if (e.target === modal) {
+    modal.classList.add("verborgen");
+  }
+});
 
 const init = () => {
   vulSeizoenSelect();
