@@ -55,30 +55,15 @@ F1 Explorer haalt data op van de Jolpica F1 API en toont coureurs, teams en race
 | LocalStorage | src/js/storage.js | regel 5–7 |
 | Formuliervalidatie | src/js/app.js | regel 27–34 |
 
-> De regelnummers kunnen 1–2 regels afwijken als je de bestanden later nog aanpast. Controleer ze kort in VS Code (de regelnummers staan links).
-
----
-
-## Installatie
-
-```bash
-git clone https://github.com/nicolasedaurdo-edu/WebAdvanced.git
-cd WebAdvanced
-npm install
-npm run dev
-```
-
-De app draait daarna op `http://localhost:5173`
-
 ---
 
 ## Screenshots
 
-![Screenshot 1](screenshots/foto1.png)
+![Screenshot 1](Screenshot/foto1.png)
 
-![Screenshot 2](screenshots/foto2.png)
+![Screenshot 2](Screenshot/foto2.png)
 
-![Screenshot 3](screenshots/foto3.png)
+![Screenshot 3](Screenshot/foto3.png)
 
 ---
 
