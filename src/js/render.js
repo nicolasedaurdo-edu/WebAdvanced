@@ -43,9 +43,19 @@ export const renderCoureurs = (coureurs) => {
       toonModal(coureur, seizoen);
     });
 
-    lijst.appendChild(kaart);
+     lijst.appendChild(kaart);
+    observer.observe(kaart);
   });
 };
+
+const observer = new IntersectionObserver((entries) => {   // (Hulp van IA)
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add("zichtbaar");
+      observer.unobserve(entry.target);
+    }
+  });
+});
 
 export const renderFavorieten = () => {
   const lijst = document.querySelector("#favorieten-lijst");
