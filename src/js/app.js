@@ -23,6 +23,15 @@ const vulSeizoenSelect = () => {
 const filterEnSorteer = () => {
   const zoekterm = zoekInput.value.toLowerCase();
   const sorteerOp = sorteerSelect.value;
+  const melding = document.querySelector("#zoek-melding");
+
+  const geldig = /^[a-zA-Z\s]*$/.test(zoekInput.value);
+  if (!geldig) {
+    melding.textContent = "⚠️ Gebruik alleen letters om te zoeken.";
+    return;
+  } else {
+    melding.textContent = "";
+  }
 
 let resultaat = alleCoureurs.filter((c) => {                              // (Hulp van AI)
     const naam = `${c.givenName} ${c.familyName}`.toLowerCase();

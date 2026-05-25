@@ -195,3 +195,9 @@ body.donker .modal-inhoud {
   opacity: 1;
   transform: translateY(0);
 }
+.melding {
+  color: #e10600;
+  font-size: 13px;
+  margin-top: 4px;
+  width: 100%;
+}
