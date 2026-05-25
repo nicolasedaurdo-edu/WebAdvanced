@@ -24,12 +24,12 @@ const filterEnSorteer = () => {
   const zoekterm = zoekInput.value.toLowerCase();
   const sorteerOp = sorteerSelect.value;
 
-  let resultaat = alleCoureurs.filter((c) => {
+  let resultaat = alleCoureurs.filter((c) => {                                  // (Hulp van AI)
     const naam = `${c.givenName} ${c.familyName}`.toLowerCase();
     return naam.includes(zoekterm) || c.nationality.toLowerCase().includes(zoekterm);
   });
 
-  resultaat.sort((a, b) => {
+  resultaat.sort((a, b) => {                                                    // (Hulp van AI)
     if (sorteerOp === "naam") {
       return a.familyName.localeCompare(b.familyName);
     } else {
@@ -46,7 +46,7 @@ const laadCoureurs = async () => {
   document.querySelector("#coureurs-lijst").innerHTML = "<p>Laden...</p>";
 
   try {
-    alleCoureurs = await getCoureurs(seizoen);
+    alleCoureurs = await getCoureurs(seizoen);                                  // (Hulp van AI)
     filterEnSorteer();
   } catch (error) {
     document.querySelector("#coureurs-lijst").innerHTML = "<p>Fout bij het laden van data.</p>";
@@ -55,7 +55,7 @@ const laadCoureurs = async () => {
 
 const wisselThema = () => {
   const huidigThema = getThema();
-  const nieuwThema = huidigThema === "licht" ? "donker" : "licht";
+  const nieuwThema = huidigThema === "licht" ? "donker" : "licht";             // (Hulp van AI)
   document.body.classList.toggle("donker");
   themaBtn.textContent = nieuwThema === "donker" ? "☀️ Licht thema" : "🌙 Donker thema";
   saveThema(nieuwThema);
@@ -67,7 +67,7 @@ modalSluit.addEventListener("click", () => {
   modal.classList.add("verborgen");
 });
 
-modal.addEventListener("click", (e) => {
+modal.addEventListener("click", (e) => {                                        // (Hulp van AI)
   if (e.target === modal) {
     modal.classList.add("verborgen");
   }
@@ -92,7 +92,7 @@ const init = () => {
 init();
 
 // =============================================================
-// GEMAAKT MET AI 
+// COMENTAAR GEMAAKT MET AI (Claude)
 // -------------------------------------------------------------
 // init()
 //   - Startfunctie die alles opzet bij het laden van de pagina
