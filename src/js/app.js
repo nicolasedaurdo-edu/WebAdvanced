@@ -24,12 +24,13 @@ const filterEnSorteer = () => {
   const zoekterm = zoekInput.value.toLowerCase();
   const sorteerOp = sorteerSelect.value;
 
-  let resultaat = alleCoureurs.filter((c) => {                                  // (Hulp van AI)
+let resultaat = alleCoureurs.filter((c) => {                              // (Hulp van AI)
     const naam = `${c.givenName} ${c.familyName}`.toLowerCase();
-    return naam.includes(zoekterm) || c.nationality.toLowerCase().includes(zoekterm);
+    const nationaliteit = (c.nationality ?? "").toLowerCase();
+    return naam.includes(zoekterm) || nationaliteit.includes(zoekterm);
   });
 
-  resultaat.sort((a, b) => {                                                    // (Hulp van AI)
+  resultaat.sort((a, b) => {                                                // (Hulp van AI)
     if (sorteerOp === "naam") {
       return a.familyName.localeCompare(b.familyName);
     } else {
