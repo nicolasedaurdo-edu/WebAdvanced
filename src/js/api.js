@@ -13,7 +13,7 @@ export const getSeizoenen = () => {
   return seizoenen;
 };
 
-export const getCoureurResultaten = async (seizoen, driverId) => {
+export const getCoureurResultaten = async (seizoen, driverId) => { 
   const response = await fetch(`https://api.jolpi.ca/ergast/f1/${seizoen}/drivers/${driverId}/results.json`);
   const data = await response.json();
   return data.MRData.RaceTable.Races;
