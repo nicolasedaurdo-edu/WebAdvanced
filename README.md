@@ -29,25 +29,25 @@ F1 Explorer haalt data op van de Jolpica F1 API en toont coureurs, teams en race
 
 ## Technische vereisten
 
-| Concept | Bestand | Lijnnummer |
-|---------|---------|------------|
-| DOM selectie | src/js/app.js | regel X |
-| DOM manipulatie | src/js/render.js | regel X |
-| Event handlers | src/js/app.js | regel X |
-| const | src/js/app.js | regel X |
-| Template literals | src/js/render.js | regel X |
-| Array iteratie | src/js/app.js | regel X |
-| Array methodes (.filter, .map, .sort) | src/js/app.js | regel X |
-| Arrow functions | src/js/app.js | regel X |
-| Ternary operator | src/js/render.js | regel X |
-| Callback functions | src/js/app.js | regel X |
-| Promises | src/js/api.js | regel X |
-| Async / Await | src/js/api.js | regel X |
-| IntersectionObserver | src/js/app.js | regel X |
-| Fetch | src/js/api.js | regel X |
-| JSON manipulatie | src/js/api.js | regel X |
-| LocalStorage | src/js/storage.js | regel X |
-| Formuliervalidatie | src/js/app.js | regel X |
+| Concept | Bestand |
+|---------|---------|
+| DOM selectie | src/js/app.js 
+| DOM manipulatie | src/js/render.js 
+| Event handlers | src/js/app.js 
+| const | src/js/app.js 
+| Template literals | src/js/render.js 
+| Array iteratie | src/js/app.js 
+| Array methodes (.filter, .map, .sort) | src/js/app.js 
+| Arrow functions | src/js/app.js 
+| Ternary operator | src/js/render.js 
+| Callback functions | src/js/app.js 
+| Promises | src/js/api.js 
+| Async / Await | src/js/api.js 
+| IntersectionObserver | src/js/app.js 
+| Fetch | src/js/api.js 
+| JSON manipulatie | src/js/api.js
+| LocalStorage | src/js/storage.js 
+| Formuliervalidatie | src/js/app.js
 
 ---
 
